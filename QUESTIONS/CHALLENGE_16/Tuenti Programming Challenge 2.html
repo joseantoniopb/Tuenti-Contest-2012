@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0042)https://contest.tuenti.net/Questions?id=16 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Tuenti Programming Challenge 2</title>
+	<link rel="stylesheet" type="text/css" href="./Tuenti Programming Challenge 2_files/contest2.css">
+</head>
+<body>
+<div class="canvas">
+
+<a href="https://contest.tuenti.net/"><h1 class="main-claim">Tuenti Programming <br>Challenge <span>2</span></h1></a>
+<a href="http://www.tuenti.com/" title="Go to tuenti"><i class="logotuenti">Go to tuenti</i></a>
+<div class="body">
+	<h2 class="promo">
+		&nbsp;
+		<span>
+		<a href="https://contest.tuenti.net/">Home</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/about">Info</a>&nbsp;
+		<a href="https://contest.tuenti.net/Questions">Questions</a>&nbsp;
+		<a href="https://contest.tuenti.net/Stats">Stats</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/tools">Tools</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/sample">Sample</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/help">Help</a>&nbsp;
+		&nbsp; &nbsp; &nbsp;
+		</span>
+	</h2>
+
+<div class="content">
+
+<h2>
+Challenge 16: <strong>Malware detector</strong><span style="margin-top:-5px;">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=15&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=17&#39;"><span>Next »</span></button>
+</span>
+</h2>
+<br>
+<p>We want to develop a malware detector. Classic non-heuristic detectors check only if the signature of the file is contained in a definitions database; that means they are only able to detect already known and tagged malware. Our aim is to create a heuristic anti-malware system able to detect unknown threats based on their strange behavior so we can protect our users against new and undiscovered malware.</p>
+<div align="center">
+<img src="./Tuenti Programming Challenge 2_files/malware.png" alt="Malware detector">
+</div>
+<p>We have already developed some kernel device drivers that intercept all the system calls done by the running processes. Every system call is then logged so we know the amount of system calls, by type, for any process.</p>
+<p>For example: for the process iexploter.exe, we have a report which is basically an array where each entry is the count for a specific system call:</p>
+25 50 1 … 44<br>
+<p>The first value could be the number of files opened, the second value could be the number of registry entries modified, and the third could be the number of TCP ports opened, etc.</p>
+<p>Your task is to create the engine that, given a set of report vectors of known malware and safe processes, is able to correctly detect new processes as safe or malware based on their behavior.</p>
+
+<h3>Input</h3>
+<p>The first line of the input gives the number of known software reports, R</p>
+The second line of the input gives the number of unknown software reports, U<p></p>
+The third line of the input gives the total number of different system calls intercepted by the kernel drivers, N<p></p>
+<br>
+<p>Then R software reports follow, with the syntax:</p>
+<p>
+[S|M] V1 V2 V3 V4 V5 …. VN<br>
+(S = Safe, M =Malware and Vi is the count value for the system call i)</p>
+<br>
+<p>Finally, U software reports follow, with the syntax:</p>
+<p>V1 V2 V3 V4 V5 …. VN</p>
+
+<h3>Output</h3>
+<p>The sum of all the system call values of the unknown software reports detected as malware.</p>
+
+<h3>Sample input</h3>
+<code>4<br>
+3<br>
+5<br>
+S 10 55 0 0 0<br>
+M 0 3 21 0 0<br>
+M 0 0 11 0 0<br>
+S 0 0 0 13 78<br>
+9 0 0 0 0<br>
+0 0 10 0 0<br>
+0 0 50 3 0</code>
+
+<h3>Sample output</h3>
+
+<code>63</code>
+
+<h2>Submit &amp; test your code</h2>
+<p>To test and submit code we provide a set of tools to help you. Download
+<a href="https://contest.tuenti.net/Info/tools">contest tools</a> if you don't have done that already. Then with
+the challenge token you will be able to test and submit your solution to this
+challenge.</p>
+<code>Challenge token: CHALLENGE_16</code>
+<br>
+<h3>To test your program</h3>
+<code>./test_challenge CHALLENGE_16 path/program</code>
+<p>A nice output will tell you if your program got the right solution or not. You can try as
+many times as you need.</p>
+<h3>To submit your program to the challenge</h3>
+<code>./submit_challenge CHALLENGE_16 path/source_pkg.tgz path/program</code>
+<p>Note that you first need to solve the test phase before submiting the code. On the submit phase we
+could give your program harder questions, so try to make your program failsafe.</p>
+<p>Remind <b>you can only submit once!</b>. Once your solution is submitted you won't be able to amend it to fix issues or make it faster,
+so please be sure your program is finished before submitting it.</p>
+<p>If you have any doubts, please check the <a href="https://contest.tuenti.net/Info/help">help section</a>.</p>
+
+
+<hr>
+<br>
+<div class="center">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=15&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=17&#39;"><span>Next »</span></button>
+</div>
+</div>
+<div class="content center">
+	<hr>
+	<div class="sharing">
+		<a href="http://www.twitter.com/#!/TuentiEng" target="_blank" title="Follow Tuenti Engineering on Twitter!"><i class="btwitter">Follow Tuenti Engineering on Twitter</i></a>
+		<a href="http://www.tuenti.com/share?url=https%3A%2F%2Fcontest.tuenti.net%2F" target="_blank" title="Share Tuenti Programming Contest in Tuenti!"><i class="btuenti">Share Tuenti Programming Contest in Tuenti</i></a>
+	</div>
+	<p class="center">
+		Tweet about this! <a href="https://twitter.com/intent/tweet?hashtags=TuentiChallenge&source=tweetbutton" target="_blank" title="Tweet about this!">#TuentiChallenge</a>
+	</p>
+</div>
+
+</div></div>
+
+<i class="footer">&nbsp;</i>
+ 
+ 
+</body></html>

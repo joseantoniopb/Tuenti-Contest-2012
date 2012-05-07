@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0042)https://contest.tuenti.net/Questions?id=11 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Tuenti Programming Challenge 2</title>
+	<link rel="stylesheet" type="text/css" href="./Tuenti Programming Challenge 2_files/contest2.css">
+</head>
+<body>
+<div class="canvas">
+
+<a href="https://contest.tuenti.net/"><h1 class="main-claim">Tuenti Programming <br>Challenge <span>2</span></h1></a>
+<a href="http://www.tuenti.com/" title="Go to tuenti"><i class="logotuenti">Go to tuenti</i></a>
+<div class="body">
+	<h2 class="promo">
+		&nbsp;
+		<span>
+		<a href="https://contest.tuenti.net/">Home</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/about">Info</a>&nbsp;
+		<a href="https://contest.tuenti.net/Questions">Questions</a>&nbsp;
+		<a href="https://contest.tuenti.net/Stats">Stats</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/tools">Tools</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/sample">Sample</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/help">Help</a>&nbsp;
+		&nbsp; &nbsp; &nbsp;
+		</span>
+	</h2>
+
+<div class="content">
+
+<h2>
+Challenge 11: <strong>Descrambler</strong><span style="margin-top:-5px;">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=10&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=12&#39;"><span>Next »</span></button>
+</span>
+</h2>
+<br>
+<p>Tired of losing at scrabble-like games? You’re not alone!
+If you can't beat your opponent on your own, it’s time to think of some dirty tricks. ;)</p>
+<div align="center">
+<img src="./Tuenti Programming Challenge 2_files/scrabble.png" alt="Descrambler">
+</div>
+<p>Here’s how: given a word list (attached <a href="https://contest.tuenti.net/resources/files/descrambler_wordlist.txt">here</a>) and a scrabble board with just one <strong>horizontal</strong> word on it, use the letters in your rack to earn as many points as possible placing a <strong>vertical</strong> word on the board.</p>
+<p>The scrabble board is simplified: there are no special score boosters, and it has unlimited size in all directions.</p>
+
+<h3>Rules</h3>
+<p>It is forbidden to extend the horizontal word on the board. Your vertical word must cross one of its letters.
+</p><p>Move allowed (HELL in the board):</p>
+<pre>&nbsp;<b>M</b>
+HELL
+&nbsp;<b>N</b>
+</pre>
+
+<p>Move not allowed (HELL in the board):</p>
+<pre>&nbsp;&nbsp;&nbsp;&nbsp;<b>H</b>
+HELL<b>O</b>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>U</b>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>R</b>
+</pre>
+
+<h3>Score calculation</h3>
+<p>The score of a word is the sum of all its letters (including the letters of the horizontal word) using the following table:</p>
+<ul>
+	<li>1 point: A E I L N O R S T U</li>
+	<li>2 points: D G</li>
+	<li>3 points: B C M P</li>
+	<li>4 points: F H V W Y</li>
+	<li>5 points: K</li>
+	<li>8 points: J X</li>
+	<li>10 points: Q Z</li>
+</ul>
+
+<h3>Input</h3>
+<p>The first line of the input gives the number of test cases, C, and C test cases follow. Each test case consists of a line with two strings, the letters in your rack (R) and the word on the board (B). 1 &lt;= strlen(R) &lt;= 25 , 1&lt;=strlen(B) &lt;= 25</p>
+
+<h3>Output</h3>
+<p>For each test case, output one line containing the best word found, and its score separated by a space. Ex. WORD SCORE. If there is more than one word with maximum score, the output should be the one with lower alphanumeric order.</p>
+
+<h3>Sample input</h3>
+<code>2<br>
+NM HELL<br>
+SWAMEO TUENTI</code>
+
+<h3>Sample output</h3>
+
+<code>MEN 5<br>
+AWESOME 12</code>
+
+<h2>Submit &amp; test your code</h2>
+<p>To test and submit code we provide a set of tools to help you. Download
+<a href="https://contest.tuenti.net/Info/tools">contest tools</a> if you don't have done that already. Then with
+the challenge token you will be able to test and submit your solution to this
+challenge.</p>
+<code>Challenge token: CHALLENGE_11</code>
+<br>
+<h3>To test your program</h3>
+<code>./test_challenge CHALLENGE_11 path/program</code>
+<p>A nice output will tell you if your program got the right solution or not. You can try as
+many times as you need.</p>
+<h3>To submit your program to the challenge</h3>
+<code>./submit_challenge CHALLENGE_11 path/source_pkg.tgz path/program</code>
+<p>Note that you first need to solve the test phase before submiting the code. On the submit phase we
+could give your program harder questions, so try to make your program failsafe.</p>
+<p>Remind <b>you can only submit once!</b>. Once your solution is submitted you won't be able to amend it to fix issues or make it faster,
+so please be sure your program is finished before submitting it.</p>
+<p>If you have any doubts, please check the <a href="https://contest.tuenti.net/Info/help">help section</a>.</p>
+
+
+<hr>
+<br>
+<div class="center">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=10&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=12&#39;"><span>Next »</span></button>
+</div>
+</div>
+<div class="content center">
+	<hr>
+	<div class="sharing">
+		<a href="http://www.twitter.com/#!/TuentiEng" target="_blank" title="Follow Tuenti Engineering on Twitter!"><i class="btwitter">Follow Tuenti Engineering on Twitter</i></a>
+		<a href="http://www.tuenti.com/share?url=https%3A%2F%2Fcontest.tuenti.net%2F" target="_blank" title="Share Tuenti Programming Contest in Tuenti!"><i class="btuenti">Share Tuenti Programming Contest in Tuenti</i></a>
+	</div>
+	<p class="center">
+		Tweet about this! <a href="https://twitter.com/intent/tweet?hashtags=TuentiChallenge&source=tweetbutton" target="_blank" title="Tweet about this!">#TuentiChallenge</a>
+	</p>
+</div>
+
+</div></div>
+
+<i class="footer">&nbsp;</i>
+ 
+ 
+</body></html>

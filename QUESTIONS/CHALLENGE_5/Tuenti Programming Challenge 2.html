@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0041)https://contest.tuenti.net/Questions?id=5 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Tuenti Programming Challenge 2</title>
+	<link rel="stylesheet" type="text/css" href="./Tuenti Programming Challenge 2_files/contest2.css">
+</head>
+<body>
+<div class="canvas">
+
+<a href="https://contest.tuenti.net/"><h1 class="main-claim">Tuenti Programming <br>Challenge <span>2</span></h1></a>
+<a href="http://www.tuenti.com/" title="Go to tuenti"><i class="logotuenti">Go to tuenti</i></a>
+<div class="body">
+	<h2 class="promo">
+		&nbsp;
+		<span>
+		<a href="https://contest.tuenti.net/">Home</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/about">Info</a>&nbsp;
+		<a href="https://contest.tuenti.net/Questions">Questions</a>&nbsp;
+		<a href="https://contest.tuenti.net/Stats">Stats</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/tools">Tools</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/sample">Sample</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/help">Help</a>&nbsp;
+		&nbsp; &nbsp; &nbsp;
+		</span>
+	</h2>
+
+<div class="content">
+
+<h2>
+Challenge 5: <strong>Time is never time again</strong><span style="margin-top:-5px;">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=4&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=6&#39;"><span>Next »</span></button>
+</span>
+</h2>
+<br>
+
+<p>And you could never ever live...
+</p>
+<p>
+If you were here last year, you will remember those marvelous clocks that we had. If not, you can still take a look at them. The point is... well... we still keep using them.
+</p>
+<p>
+They are 7 LED-per-digit clocks, 6 digits, 24 hours (so no a.m. and p.m. indicators). The first clock is a bit old and a bit inefficient, as it wastes energy to display a number. To go from 00:00:00 to 00:00:01, it turns all the LEDs (36) off and on again to show 00:00:01 (32 in this case). The second clock is still old, but from a newer generation, which tries to save some of that precious energy that we need. This clock is able to calculate the <em>deltas</em> needed in order to go from one number to the next, so that it will not trigger unnecessary LEDs. In the example above, to go from 00:00:00 to 00:00:01 it will not light any new LEDs, as it just has to turn some off. And to go from 00:00:01 to 00:00:02 it will need to calculate the LED differences between 1 and 2, which is 4 (still a savings compared to the old clock, which will need 5).
+</p>
+
+<p>You will be given two dates. Your task is to calculate the inefficiency of the old clock compared to the new one (so the difference in the number of LEDs turned on), when starting in one date and time and finishing in the other. Assume both clocks are off and are being turned on at the first date, so they will both require lighting all the necessary LEDs to show 00:00:00.</p>
+
+<div class="center"><img src="./Tuenti Programming Challenge 2_files/clock.png" alt="Time waits for no one" border="0"></div>
+
+<h3>Input</h3>
+<p>
+Two dates in the format: </p><pre>2012-01-18 00:00:00 - 2012-01-24 01:04:16.</pre> 
+<p></p>
+
+<h3>Output</h3>
+<p>
+The difference in the number of LEDs turned on in the two clocks.		
+</p>
+
+
+<h3>Sample input</h3>
+<code>
+2012-01-02 00:00:00 - 2012-01-09 00:19:55 <br>
+2012-01-06 00:00:00 - 2012-01-10 11:14:44 <br>
+2012-01-09 00:00:00 - 2012-01-15 10:27:32 <br>
+2012-01-17 00:00:00 - 2012-01-24 09:57:23 <br>
+2012-01-15 00:00:00 - 2012-01-22 13:23:31 <br>
+</code>
+
+<h3>Sample output</h3>
+
+<code>
+15822521    <br>
+10139168    <br>
+14581994    <br>
+16791741    <br>
+17083065    <br>
+</code>
+
+
+<h2>Submit &amp; test your code</h2>
+<p>To test and submit code we provide a set of tools to help you. Download
+<a href="https://contest.tuenti.net/Info/tools">contest tools</a> if you don't have done that already. Then with
+the challenge token you will be able to test and submit your solution to this
+challenge.</p>
+<code>Challenge token: CHALLENGE_5</code>
+<br>
+<h3>To test your program</h3>
+<code>./test_challenge CHALLENGE_5 path/program</code>
+<p>A nice output will tell you if your program got the right solution or not. You can try as
+many times as you need.</p>
+<h3>To submit your program to the challenge</h3>
+<code>./submit_challenge CHALLENGE_5 path/source_pkg.tgz path/program</code>
+<p>Note that you first need to solve the test phase before submiting the code. On the submit phase we
+could give your program harder questions, so try to make your program failsafe.</p>
+<p>Remind <b>you can only submit once!</b>. Once your solution is submitted you won't be able to amend it to fix issues or make it faster,
+so please be sure your program is finished before submitting it.</p>
+<p>If you have any doubts, please check the <a href="https://contest.tuenti.net/Info/help">help section</a>.</p>
+
+
+<hr>
+<br>
+<div class="center">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=4&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=6&#39;"><span>Next »</span></button>
+</div>
+</div>
+<div class="content center">
+	<hr>
+	<div class="sharing">
+		<a href="http://www.twitter.com/#!/TuentiEng" target="_blank" title="Follow Tuenti Engineering on Twitter!"><i class="btwitter">Follow Tuenti Engineering on Twitter</i></a>
+		<a href="http://www.tuenti.com/share?url=https%3A%2F%2Fcontest.tuenti.net%2F" target="_blank" title="Share Tuenti Programming Contest in Tuenti!"><i class="btuenti">Share Tuenti Programming Contest in Tuenti</i></a>
+	</div>
+	<p class="center">
+		Tweet about this! <a href="https://twitter.com/intent/tweet?hashtags=TuentiChallenge&source=tweetbutton" target="_blank" title="Tweet about this!">#TuentiChallenge</a>
+	</p>
+</div>
+
+</div></div>
+
+<i class="footer">&nbsp;</i>
+ 
+ 
+</body></html>

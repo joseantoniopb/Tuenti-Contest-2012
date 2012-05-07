@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0041)https://contest.tuenti.net/Questions?id=6 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Tuenti Programming Challenge 2</title>
+	<link rel="stylesheet" type="text/css" href="./Tuenti Programming Challenge 2_files/contest2.css">
+</head>
+<body>
+<div class="canvas">
+
+<a href="https://contest.tuenti.net/"><h1 class="main-claim">Tuenti Programming <br>Challenge <span>2</span></h1></a>
+<a href="http://www.tuenti.com/" title="Go to tuenti"><i class="logotuenti">Go to tuenti</i></a>
+<div class="body">
+	<h2 class="promo">
+		&nbsp;
+		<span>
+		<a href="https://contest.tuenti.net/">Home</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/about">Info</a>&nbsp;
+		<a href="https://contest.tuenti.net/Questions">Questions</a>&nbsp;
+		<a href="https://contest.tuenti.net/Stats">Stats</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/tools">Tools</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/sample">Sample</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/help">Help</a>&nbsp;
+		&nbsp; &nbsp; &nbsp;
+		</span>
+	</h2>
+
+<div class="content">
+
+<h2>
+Challenge 6: <strong>Cross-stitched fonts</strong><span style="margin-top:-5px;">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=5&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=7&#39;"><span>Next »</span></button>
+</span>
+</h2>
+<br>
+<br>
+<div class="center">
+	<img src="./Tuenti Programming Challenge 2_files/stitchedtuenti.jpg" alt="Stitched tuenti" width="300" height="154" align="bottom" border="0">
+</div>
+<p>If geeks had to pick their favourite embroidery technique, there is no doubts that <strong>cross-stitch</strong> would be the chosen one: it’s all about pixels, fabric resolution and sprites!  So, to celebrate National Craft Week we are going to cross-stitch messages to decorate handmade cards that will then be sold to raise funds for orphan sheep in New Zealand. </p>
+
+<p>Materials for cross-stitching are quite simple: cloth, a needle and thread. There are many kinds of fabrics for cross-stitching, all of them available in different resolutions or <em>counts</em>. The <strong>count (ct)</strong> is the number of pixels (or stitches) per inch of cloth, for example, 14ct indicates 14 pixels per inch.</p>
+
+<div style="float:right;">
+	<img src="./Tuenti Programming Challenge 2_files/aida14.jpg" alt="Stitched tuenti" height="146" width="160" align="bottom" border="0">
+</div>
+
+<p>We have some rectangular fabric pieces and messages to stitch, and we want to use all possible space with maximum font size (measured in pixels or stitches) without splitting words across lines. As good geeks, we will use a monospace font for the message, therefore all characters, including whitespaces, take up the same space (both in vertical and horizontal). We must leave a whitespace between words, but we will <strong>not</strong> leave any between different lines.</p>
+
+<p>In order to buy enough thread, we have estimated that <strong>each stitch uses <em>1/(fabric ct)</em> inches of thread</strong>, and that the <strong>average number of stitches per character (except the whitespace!)</strong> is <em>(font size)<sup>2</sup>/2</em>. For example, if we use a 14ct fabric with a font size of 14, then each character will use an average of 7’’ of thread.</p> 
+
+<p>Your task is to compute the minimum amount of thread we need to order. We cannot order fractions of an inch, that is, if we need 16.6'' of thread, we will order 17''.</p>
+
+<h3>Input</h3>
+<p>The first line of the input gives the number of test cases, C, and C test cases follow. Each test case consists of 2 lines. The first one contains 3 integers, W, H and ct, indicating respectively width, height (in inches) and count of the piece of fabric. The next line contains the message we want to stitch. The text can contain digits, upper and lower-case letters, space characters (but no tabs or newlines) and some symbols:</p>
+<code>
+	0-9 a-z A-Z <pre>!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[] ^_`{|}~ </pre>
+</code>	
+The text will not start with whitespaces, nor will there be two adjacent space characters.
+
+<br>
+
+<h3>Output</h3>
+<p>For each test case, output one line containing "Case #x: P", where x is the case number (starting from 1) and P is the minimum thread length (in inches) we would need if we stitched the message using the maximum size possible for the characters. If it’s not possible to fit the message, output 0.</p>
+
+<h3>Limits</h3>
+1 ≤ C ≤ 30 <br>
+1 ≤ W, H, characters in message ≤ 5000 <br>
+1 ≤ ct ≤ 100 <br>
+
+<h3>Sample input</h3>
+<code>
+	2 <br>
+	10 3 2 <br>
+	tuenti ;) <br>
+	10 2 10 <br>
+	god is a sheep
+</code>
+
+<h3>Sample output</h3>
+
+<code>
+	Case #1: 18 <br>
+	Case #2: 55
+</code>
+
+<h2>Submit &amp; test your code</h2>
+<p>To test and submit code we provide a set of tools to help you. Download
+<a href="https://contest.tuenti.net/Info/tools">contest tools</a> if you don't have done that already. Then with
+the challenge token you will be able to test and submit your solution to this
+challenge.</p>
+<code>Challenge token: CHALLENGE_6</code>
+<br>
+<h3>To test your program</h3>
+<code>./test_challenge CHALLENGE_6 path/program</code>
+<p>A nice output will tell you if your program got the right solution or not. You can try as
+many times as you need.</p>
+<h3>To submit your program to the challenge</h3>
+<code>./submit_challenge CHALLENGE_6 path/source_pkg.tgz path/program</code>
+<p>Note that you first need to solve the test phase before submiting the code. On the submit phase we
+could give your program harder questions, so try to make your program failsafe.</p>
+<p>Remind <b>you can only submit once!</b>. Once your solution is submitted you won't be able to amend it to fix issues or make it faster,
+so please be sure your program is finished before submitting it.</p>
+<p>If you have any doubts, please check the <a href="https://contest.tuenti.net/Info/help">help section</a>.</p>
+
+
+<hr>
+<br>
+<div class="center">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=5&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=7&#39;"><span>Next »</span></button>
+</div>
+</div>
+<div class="content center">
+	<hr>
+	<div class="sharing">
+		<a href="http://www.twitter.com/#!/TuentiEng" target="_blank" title="Follow Tuenti Engineering on Twitter!"><i class="btwitter">Follow Tuenti Engineering on Twitter</i></a>
+		<a href="http://www.tuenti.com/share?url=https%3A%2F%2Fcontest.tuenti.net%2F" target="_blank" title="Share Tuenti Programming Contest in Tuenti!"><i class="btuenti">Share Tuenti Programming Contest in Tuenti</i></a>
+	</div>
+	<p class="center">
+		Tweet about this! <a href="https://twitter.com/intent/tweet?hashtags=TuentiChallenge&source=tweetbutton" target="_blank" title="Tweet about this!">#TuentiChallenge</a>
+	</p>
+</div>
+
+</div></div>
+
+<i class="footer">&nbsp;</i>
+ 
+ 
+</body></html>

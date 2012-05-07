@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0042)https://contest.tuenti.net/Questions?id=13 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<title>Tuenti Programming Challenge 2</title>
+	<link rel="stylesheet" type="text/css" href="./Tuenti Programming Challenge 2_files/contest2.css">
+</head>
+<body>
+<div class="canvas">
+
+<a href="https://contest.tuenti.net/"><h1 class="main-claim">Tuenti Programming <br>Challenge <span>2</span></h1></a>
+<a href="http://www.tuenti.com/" title="Go to tuenti"><i class="logotuenti">Go to tuenti</i></a>
+<div class="body">
+	<h2 class="promo">
+		&nbsp;
+		<span>
+		<a href="https://contest.tuenti.net/">Home</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/about">Info</a>&nbsp;
+		<a href="https://contest.tuenti.net/Questions">Questions</a>&nbsp;
+		<a href="https://contest.tuenti.net/Stats">Stats</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/tools">Tools</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/sample">Sample</a>&nbsp;
+		<a href="https://contest.tuenti.net/Info/help">Help</a>&nbsp;
+		&nbsp; &nbsp; &nbsp;
+		</span>
+	</h2>
+
+<div class="content">
+
+<h2>
+Challenge 13: <strong>The crazy croupier</strong><span style="margin-top:-5px;">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=12&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=14&#39;"><span>Next »</span></button>
+</span>
+</h2>
+<br>
+<p>In Las Vegas, there is a croupier who is famous because of the weird way he shuffles a deck of N cards. He splits the deck in two sets. Then, he picks one card from the top of the first set and put it down on the table to form a new pile of cards. Then he picks one card from the top of the other bunch and puts it on top of the new stack. The process goes on until one of the two original bunches is empty. Finally, the croupier puts the remaining cards on the new stack by taking them one by one from the top of the remaining stack.</p><br>
+
+<h4>Example:</h4>
+Number of cards: N = 10<br>
+Number of cards in the first set: L = 3<br>
+Cards: 10 1 4 2 8 5 6 7 3 9<br>
+First set: 10 1 4<br>
+Second set: 2 8 5 6 7 3 9<br>
+Shuffled set: 4 9 1 3 10 7 6 5 8 2 <br>
+<br>
+<p>As if the process were not cumbersome enough, he just repeats it. <b>How many times should the croupier repeat the process until the cards come to the original position</b>, given that the croupier always splits the cards exactly in the same way? (L is constant along the whole routine).</p>
+<br>
+
+
+<h3>Input</h3>
+<p>The first line of the input gives the number of test cases, C, and C test cases follow (1 ≤ C ≤ 100). Each test case consists of a line with two integers N, the number of cards in the deck, and L, the number of cards in the first set. 1 ≤ N ≤ 10<sup>6</sup> and 0 ≤ L ≤ N</p>
+<br>
+
+<h3>Output</h3>
+<p>For each test case, output one line containing "Case #x: M", where x is the case number (starting from 1) and M is the <b>minimum</b> number of times that the croupier should repeat the process until the cards come to the original position.</p>
+
+<h3>Sample input</h3>
+<code>
+3 <br>
+11 6 <br>
+10 7 <br>
+5 3
+</code>
+
+<h3>Sample output</h3>
+<code>
+Case #1: 5<br>
+Case #2: 6<br>
+Case #3: 4
+</code>
+<br>
+<b>Please implement the most efficient algorithm (in terms of execution time) you can think of. Brute-force based solutions will have a poor evaluation.</b>
+
+<h2>Submit &amp; test your code</h2>
+<p>To test and submit code we provide a set of tools to help you. Download
+<a href="https://contest.tuenti.net/Info/tools">contest tools</a> if you don't have done that already. Then with
+the challenge token you will be able to test and submit your solution to this
+challenge.</p>
+<code>Challenge token: CHALLENGE_13</code>
+<br>
+<h3>To test your program</h3>
+<code>./test_challenge CHALLENGE_13 path/program</code>
+<p>A nice output will tell you if your program got the right solution or not. You can try as
+many times as you need.</p>
+<h3>To submit your program to the challenge</h3>
+<code>./submit_challenge CHALLENGE_13 path/source_pkg.tgz path/program</code>
+<p>Note that you first need to solve the test phase before submiting the code. On the submit phase we
+could give your program harder questions, so try to make your program failsafe.</p>
+<p>Remind <b>you can only submit once!</b>. Once your solution is submitted you won't be able to amend it to fix issues or make it faster,
+so please be sure your program is finished before submitting it.</p>
+<p>If you have any doubts, please check the <a href="https://contest.tuenti.net/Info/help">help section</a>.</p>
+
+
+<hr>
+<br>
+<div class="center">
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=12&#39;"><span>« Prev</span></button>
+	<button class="nButton lButton nSend " onclick="document.location=&#39;/Questions?id=14&#39;"><span>Next »</span></button>
+</div>
+</div>
+<div class="content center">
+	<hr>
+	<div class="sharing">
+		<a href="http://www.twitter.com/#!/TuentiEng" target="_blank" title="Follow Tuenti Engineering on Twitter!"><i class="btwitter">Follow Tuenti Engineering on Twitter</i></a>
+		<a href="http://www.tuenti.com/share?url=https%3A%2F%2Fcontest.tuenti.net%2F" target="_blank" title="Share Tuenti Programming Contest in Tuenti!"><i class="btuenti">Share Tuenti Programming Contest in Tuenti</i></a>
+	</div>
+	<p class="center">
+		Tweet about this! <a href="https://twitter.com/intent/tweet?hashtags=TuentiChallenge&source=tweetbutton" target="_blank" title="Tweet about this!">#TuentiChallenge</a>
+	</p>
+</div>
+
+</div></div>
+
+<i class="footer">&nbsp;</i>
+ 
+ 
+</body></html>
